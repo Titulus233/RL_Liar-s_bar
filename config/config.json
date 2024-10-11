@@ -1,0 +1,31 @@
+{
+    "environment": {
+        "num_players": 2,
+        "max_timesteps": 100000,
+        "render": false
+    },
+    "agent": {
+        "model_type": "DQN",
+        "learning_rate": 0.001,
+        "buffer_size": 10000,
+        "learning_starts": 1000,
+        "batch_size": 32,
+        "gamma": 0.99,
+        "train_freq": 4,
+        "target_update_interval": 1000,
+        "exploration_fraction": 0.1,
+        "exploration_final_eps": 0.02,
+        "tensorboard_log": "./logs/dqn_tensorboard/"
+    },
+    "training": {
+        "total_timesteps": 100000,
+        "checkpoint_freq": 1000,
+        "eval_freq": 5000,
+        "model_save_path": "./models/dqn_liars_deck_final.zip",
+        "log_path": "./logs/"
+    },
+    "evaluation": {
+        "episodes": 100,
+        "model_path": "./models/dqn_liars_deck_final.zip"
+    }
+}
